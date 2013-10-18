@@ -1,0 +1,87 @@
+<doctype html>
+	<title>Bitstamper</title>
+
+<style type="text/css">iframe {border: 0;} html {background: #F7F6F2;}
+
+html, body {border:0;padding: 0; margin: 0;}
+#header {height: 175px; width: 1000px; overflow: hidden;}
+#sound {height: 45px; width: 200px; overflow: hidden; float: right;}
+#sound .inner{ margin-left: -300px}
+.con {width: 1000px; margin: 0 auto; -webkit-transition: padding .5s ease-in-out; }
+#orderbook {overflow: hidden; position: relative;}
+#orderbook .inner {margin-top: -300px;}
+header {position: fixed; z-index: 1000; width: 1000px; background: #F7F6F2; box-shadow: 0px 54px 65px -60px rgba(0,0,0,.5);}
+.spacer { height: 240px;}
+.buy, .sell {height: 390px; width: 350px; overflow: hidden;}
+.buy .inner {margin-top: -223px;}
+.sell .inner {margin-top: -613px;}
+
+aside {position: absolute; top: 230px; right: -350px;}
+.buy, .sell {opacity: .55; -webkit-transition: opacity .35s ease-in-out;}
+.buy:hover, .sell:hover {opacity: 1;}
+
+.open {overflow: hidden; height: 180px; position: fixed; bottom: -180px; border-left: 150px solid #F7F6F2; border-right: 150px solid #F7F6F2; box-shadow: 0px -54px 65px -60px rgba(0,0,0,.5); overflow-y: scroll;  border-top: 20px solid #F7F6F2;  -webkit-transition: bottom .5s ease-in-out; }
+.open .inner {margin-left: -300px; margin-top: -300px;}
+
+.open:hover {bottom: 0;}
+
+@media (max-width: 1700px){
+	.con {padding-right: 350px;}
+}
+
+@media (max-width: 1350px){
+	.con {margin: 0; padding: 0}
+}
+</style>
+<div class="con">
+	<header>
+		<div id="sound">
+			<div class="inner">
+				<iframe src="http://www.bitstamp.net/" width=1000 height=4500></iframe>
+			</div>
+		</div>
+		<div id="header">
+			<iframe src="http://www.bitstamp.net/" width=1000 height=4500></iframe>
+		</div>
+		<aside>
+			<div class="inner">
+
+				<div class="buy">
+					<div class="inner">
+						<iframe id="buy" src="https://www.bitstamp.net/market/order/" width=350 height=10390></iframe>
+					</div>
+				</div>
+				<div class="sell">
+					<div class="inner">
+						<iframe id="sell" src="https://www.bitstamp.net/market/order/" width=350 height=10390></iframe>
+					</div>
+				</div>
+			</div>
+			<a href="#reload" class="re" style="opacity: .3; float: right; right: 20px; position: relative;"><svg height="40" version="1.1" width="40" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#ffffff" d="M24.083,15.5C24.073999999999998,20.239,20.238999999999997,24.073999999999998,15.499999999999998,24.083C10.758999999999999,24.073999999999998,6.922999999999998,20.238999999999997,6.914999999999997,15.499999999999998C6.922999999999997,10.758999999999999,10.758999999999997,6.922999999999998,15.499999999999998,6.914999999999997C17.412999999999997,6.914999999999997,19.165,7.543999999999997,20.589999999999996,8.600999999999997L18.807999999999996,10.383999999999997L27.236999999999995,12.639999999999997L24.976999999999997,4.212999999999997L23.086999999999996,6.102999999999997C21.014999999999997,4.425999999999997,18.369999999999997,3.414999999999997,15.499999999999996,3.414999999999997C8.826,3.418,3.418,8.826,3.416,15.5C3.418,22.175,8.826,27.583,15.5,27.583S27.583,22.175,27.583,15.5H24.083Z" stroke-width="3" stroke-linejoin="round" opacity="0" transform="matrix(1,0,0,1,4,4)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linejoin: round; opacity: 0;"></path><path fill="#333333" stroke="none" d="M24.083,15.5C24.073999999999998,20.239,20.238999999999997,24.073999999999998,15.499999999999998,24.083C10.758999999999999,24.073999999999998,6.922999999999998,20.238999999999997,6.914999999999997,15.499999999999998C6.922999999999997,10.758999999999999,10.758999999999997,6.922999999999998,15.499999999999998,6.914999999999997C17.412999999999997,6.914999999999997,19.165,7.543999999999997,20.589999999999996,8.600999999999997L18.807999999999996,10.383999999999997L27.236999999999995,12.639999999999997L24.976999999999997,4.212999999999997L23.086999999999996,6.102999999999997C21.014999999999997,4.425999999999997,18.369999999999997,3.414999999999997,15.499999999999996,3.414999999999997C8.826,3.418,3.418,8.826,3.416,15.5C3.418,22.175,8.826,27.583,15.5,27.583S27.583,22.175,27.583,15.5H24.083Z" transform="matrix(1,0,0,1,4,4)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="0" y="0" width="32" height="32" r="0" rx="0" ry="0" fill="#000000" stroke="#000" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></rect></svg></a>
+		</aside>
+	</header>
+	<div class="spacer"></div>
+	<div id="orderbook">
+		<div class="inner">
+			<iframe src="http://www.bitstamp.net/market/order_book/" width=1000 height=100000></iframe>
+		</div>
+	</div>
+
+		<div class="open">
+			<div class="inner">
+				<iframe src="https://www.bitstamp.net/account/orders/" width=1000 height=4500></iframe>
+			</div>
+		</div>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+$('#header').scrollTop(310);
+$('#sound').scrollTop(860);
+
+$('aside').find('.re').click(function(){
+	$('aside .inner').html($('aside .inner').html())
+})
+
+</script>
